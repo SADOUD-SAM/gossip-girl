@@ -1,0 +1,343 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    background:#F1F1F1;
+    font-family:roboto,sans-serif;
+    font-size: 14px;
+    color:rgba(0,0,0,0.6);
+    margin:0;
+    line-height: 1.3;
+}
+.topbar{
+    background:#2C3E50;
+    color:#FFF
+}
+.topbar-logo{
+    display:block;
+    text-align: center;
+    font-size: 24PX;
+    padding:11px 0;
+    
+}
+  a{
+    color:inherit;
+}
+.topbar a{
+    text-decoration: none;
+}
+.topbar-nav a{
+    display: inline-block;
+    margin: 0 12px;
+    color:rgba(255,255,255,0.67);
+    transition:color .3s;
+}
+.topbar-nav{
+    text-align: center;
+    padding-bottom: 16px;
+    line-height:1.8 ;
+}
+.topbar-nav a:hover{
+    color:white;
+}
+.topbar-nav a.active{
+    color:white;
+}
+.container{
+    padding:0 15px;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.site{
+    margin-top;:20px;
+    margin-bottom: 20px;
+}
+.sidebar{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.main{
+    margin-bottom: 20px;
+}
+.profil{
+    display: none;
+}
+.sidebar a{
+    width:50%;
+    
+    display:block;
+    text-decoration: none;
+    padding:0.6em 0;
+    transition: .3s;
+    border: solid 1px transparent;
+    padding-left: 10px;
+
+    
+}
+.sidebar a.active{
+    color:#000;
+    border:solid 1px #DBDBDB;
+    border-radius: 3px;
+    background: #FFF;
+    font-weight: bold;
+}
+.sidebar a:hover{
+    color:#000;
+    
+    border:solid  1px #DBDBDB;
+    border-radius: ;
+    background: #FFF;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.sidebar a.active::before{
+    opacity:1;
+}
+.sidebar a:hover::before{
+    opacity:1;
+}
+.sidebar a::before{
+    content:"";
+    display:inline-block;
+    width: 30px;
+    height: 20px;
+    vertical-align:text-top;
+    margin-right: 8px;
+    opacity: .67;
+    transition:opacity .3s;
+    
+    
+    
+    
+    ;
+
+    background: url(img.jpg) center center/contain no-repeat;
+}
+.sidebar .sidebar-events::before{
+    background-image: url(img/EVENT.png);
+    
+    
+}
+.sidebar-messages::before{
+    
+    background-image: url(img/messages.jpg)!important
+}
+.sidebar .sidebar-home::before {
+    background-image: url(img/home.png)
+}
+.sidebar .sidebar-friends::before {
+    background-image: url(img/friends.jpg);
+}
+.sidebar .sidebar-groupes::before {
+    background-image: url(img/friends.jpg) ;
+}
+.card{
+    border:solid 1px #FFF;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+.card:last-child{
+    margin-bottom: 0;
+}
+.card-body{
+    padding:0 10 30 10;
+}
+.card-header{
+    position: relative;
+    padding:10px;
+
+   
+}
+.card-header-avatar{
+    padding-left: 65px;
+
+}
+.card-avatar{
+    position:absolute;
+    top:50%;
+    left:10px;
+    transform: translateY(-50%);
+    
+    
+    
+
+}
+.card-title{
+    font-weight: bold;
+    color:black;
+    margin-bottom: 5px;
+    font-size: 15px;
+
+}
+.card-time{
+
+    color:rgba(0,0,0,0.38);
+    font-size: 12px;
+}
+.picture img {
+    width: 100%;
+}
+.card-header-avatar{
+
+}
+.card-footer{
+    border-top: solid 1px #DBDBDB;
+    background: #FBFBFB;
+    display:flex;
+    padding:0 10;
+    /*justify-content: space-between; premiere possibilité pour espacer les icônes
+    like et comments*/
+    font-size:12px;
+    color:#BDBDBD;
+
+
+}
+.card-footer a{
+text-decoration: none;
+}
+.card-footer a:hover{
+    text-decoration: underline;
+}
+.card-like::before{
+    content:"#";
+    display: inline-block;
+    width: 20px;
+    height:20px;
+    background:url(img/like.jpeg)center center/20px 18px no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card-comments::before{
+    content:"#";
+    display: inline-block;
+    width:20px ;
+    height:20px ;
+    background: url(img/comments.jpeg) center center/18px 17px no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card-comments{
+    margin-left:auto;
+    /* deuxieme solution pour mettre l'icone "comments" totalement à gauche*/
+}
+.suggestion::after{
+    content: "";
+    display:block;
+    height: 1px;
+    width: 100%;
+    background:#000;
+    margin-top: 4px;
+
+    
+}
+.suggestion{
+    margin-top: 30px;
+    margin-bottom: 18px;
+    color:#000;
+    font-size:15px;
+    font-weight: bold;
+}
+.friends{
+    margin:14px 0;
+    display: flex;
+    
+
+}
+
+.friend-avatar{
+    width:76px;
+    height:76px;
+    flex:none;
+    margin-right:10px;
+}
+.friend-add{
+    display: block;
+    font-size: 12px;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top:auto;
+    
+    
+    }
+.friend-add::before {
+    content:"";
+    display: inline-block;
+    width:20px;
+    height: 16px;
+    transform:translateY(-1px);
+
+    background: url(img/ajouter+.jpg) center center/20px 16px no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.friend-name{
+    display:block;
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.friend-body{
+    display: flex;
+    flex-direction: column;
+    
+}
+.friend-connections{
+    color:rgba(0,0,0,0.38);
+    font-size: 12x;
+}
+
+
+
+@media only screen and (min-width:520px) {
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding:0 25px;
+}
+.topbar-logo,
+.topbar-nav{
+
+    padding:0;
+}
+.topbar-nav a{
+    margin: 0 20px;
+}
+}
+@media only screen and (min-width:950px) {
+    .site {
+        display:flex;
+    }
+    .sidebar{
+        display:block;
+        width:180px;
+        flex:none;
+    }
+    .sidebar a{
+        width:100%;
+    }
+    .aside{
+       width: 310px;
+       flex:none;
+    }
+    .main{
+        width:100%;
+
+        margin-right:30px;
+        margin-left: 30px;
+    }
+    .profil{
+        display: block;
+    }
+}
